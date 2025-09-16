@@ -1,6 +1,6 @@
 A RESTful API for a ToDo application built with Django and Django Rest Framework.
 
-Features
+**Features**
 
 CRUD operations for ToDo items (Create, Read, Update, Delete)
 
@@ -10,7 +10,7 @@ Possibly user authentication (users can manage their own ToDo items)
 
 SQLite database for development
 
-Requirements
+**Requirements**
 
 Python 3.x
 
@@ -18,7 +18,7 @@ Django
 
 Django Rest Framework
 
-Installation
+**Installation**
 
 Clone the repository
 
