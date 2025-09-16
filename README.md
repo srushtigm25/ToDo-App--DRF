@@ -1,31 +1,75 @@
-A RESTful API for a ToDo application built with Django and Django Rest Framework.
+A RESTful API for managing ToDo items, built with Django and Django Rest Framework (DRF).
+This project demonstrates how to design and implement CRUD APIs with authentication and database integration.
 
-**Features**
+🚀 Features
 
 CRUD operations for ToDo items (Create, Read, Update, Delete)
 
-Each ToDo item has fields like: title, description, status, timestamps
+Each item includes:
 
-Possibly user authentication (users can manage their own ToDo items)
+title
 
-SQLite database for development
+description
 
-**Requirements**
+status (pending/completed)
+
+created_at & updated_at timestamps
+
+User authentication (optional) → each user manages their own ToDos
+
+SQLite database for easy development & testing
+
+🛠️ Tech Stack
 
 Python 3.x
 
 Django
 
-Django Rest Framework
+Django Rest Framework (DRF)
 
-**Installation**
+SQLite (default DB, can be swapped with PostgreSQL/MySQL)
+
+⚙️ Installation & Setup
 
 Clone the repository
 
-Create and activate a virtual environment
+git clone https://github.com/srushtigm25/ToDo-App--DRF.git
+cd ToDo-App--DRF
 
-Install dependencies (pip install -r requirements.txt)
 
-Run migrations (python manage.py migrate)
+Create & activate a virtual environment
 
-Start development server (python manage.py runserver)
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Run migrations
+
+python manage.py migrate
+
+
+Start development server
+
+python manage.py runserver
+
+📌 API Endpoints (Examples)
+Method	Endpoint	Description
+GET	/api/todos/	List all ToDos
+POST	/api/todos/	Create a new ToDo
+GET	/api/todos/{id}/	Retrieve a ToDo
+PUT	/api/todos/{id}/	Update a ToDo
+DELETE	/api/todos/{id}/	Delete a ToDo
+
+(If auth enabled → requires login)
+
+🔒 Authentication (Optional)
+
+Token-based authentication using DRF’s built-in system
+
+Each user can only manage their own ToDos
